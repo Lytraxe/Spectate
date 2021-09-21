@@ -1,0 +1,22 @@
+name: Spectate
+version: 0.5.0
+main: io.github.m0rv1n.spectate.Spectate
+api-version: 1.16
+description: MiniGame Spectate tool
+commands:
+  spect:
+    description: Lets player spectate
+    usage: /spect <arenaName | list | exit>
+    permission: spectate.use
+permissions:
+  spectate.*:
+    default: op
+    children:
+      - spectate.use
+      - spectate.admin
+  spectate.use:
+    default: op
+    description: permission to use /spect
+  spectate.admin:
+    default: op
+    description: permission to use /spect <add | remove>
